@@ -7,6 +7,7 @@ To create network tokens and cryptograms, you need an ActionSuite account.
 ## Setup
 
     npm install
+    npm install -g ts-node
 
 copy `.env.example` to `.env` and populate the keys with your credentials
 
@@ -23,7 +24,7 @@ prod | https://services.prod.pagosapi.com | Real time
 
 Edit `src/token-create.ts` to change card and expiration date
 
-    ts-node --esm src/token-create.js
+    ts-node --esm src/token-create.ts
 
 The returned tokenRefId is used in the next api calls
 
@@ -31,20 +32,20 @@ The returned tokenRefId is used in the next api calls
 
 Use the tokenRefId from previous call
 
-    ts-node --esm src/token-transact.js <tokenRefId>
+    ts-node --esm src/token-transact.ts <tokenRefId>
 
 ## Token status
 
-    ts-node --esm src/token-get-status.js <tokenRefId>
+    ts-node --esm src/token-get-status.ts <tokenRefId>
 
 ## Suspend token
 
-    ts-node --esm src/token-update-status.js <tokenRefId> suspend
+    ts-node --esm src/token-update-status.ts <tokenRefId> suspend
 
 ## Resume token
 
-    ts-node --esm src/token-update-status.js <tokenRefId> resume
+    ts-node --esm src/token-update-status.ts <tokenRefId> resume
 
 ## Delete token
 
-    ts-node --esm src/token-delete.js <tokenRefId> resume
+    ts-node --esm src/token-delete.ts <tokenRefId>

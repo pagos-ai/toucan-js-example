@@ -25,6 +25,5 @@ import { HandleRequest }  from './lib/api_handler.js';
             console.log("failed ", token.Errors);
         }
     }
-    
 })();
  
