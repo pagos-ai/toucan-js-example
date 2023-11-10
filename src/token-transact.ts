@@ -13,7 +13,7 @@ import { HandleRequest }  from './lib/api_handler.js';
     let token = await HandleRequest<TransactResponse>(toucanConfig, 
         "{}",  
         "POST", 
-        `/tokens/transact/${tokenRefId}`, 
+        `/toucan/tokens/transact/${tokenRefId}`, 
         "application/json");
 
     if(token.Success) {

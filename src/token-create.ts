@@ -14,7 +14,7 @@ import { HandleRequest }  from './lib/api_handler.js';
     let token = await HandleRequest<TokenResponse>(toucanConfig, 
         JSON.stringify(card),  
         "POST", 
-        `/tokens/tokenize`, 
+        `/toucan/tokens/tokenize`, 
         "application/json");
 
     if(token.Success) {

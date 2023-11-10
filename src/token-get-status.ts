@@ -13,7 +13,7 @@ import { HandleRequest }  from './lib/api_handler.js';
     let token =  await HandleRequest<TokenGetStatusResponse>(toucanConfig, 
         "",  
         "GET", 
-        `/tokens/${tokenRefId}/status`, 
+        `/toucan/tokens/${tokenRefId}/status`, 
         "");
 
     if(token.Success) {
