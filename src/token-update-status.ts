@@ -20,7 +20,7 @@ const statuses = ["suspend", "resume"];
     let token =  await HandleRequest<TokenUpdateStatusResponse>(toucanConfig, 
         "",  
         "PUT", 
-        `/tokens/${tokenRefId}/${newStatus}`, 
+        `/toucan/tokens/${tokenRefId}/${newStatus}`, 
         "");
         
     if(token.Success) {

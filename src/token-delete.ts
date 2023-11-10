@@ -13,7 +13,7 @@ import { HandleRequest }  from './lib/api_handler.js';
     let token =  await HandleRequest<TokenUpdateStatusResponse>(toucanConfig, 
         "",  
         "DELETE", 
-        `/tokens/${tokenRefId}`, 
+        `/toucan/tokens/${tokenRefId}`, 
         "");
 
     if(token.Success) {
